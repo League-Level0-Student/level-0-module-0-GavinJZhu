@@ -16,19 +16,19 @@ public class QuizGame {
 				score += 1;
 				}
 				// 4.  if the user's answer was correct, add one to their score 
-				String questin = JOptionPane.showInputDialog ("What is the name for the thing at the end of a shoelace?");
-				if (question.equalsIgnoreCase("aglet")) {
-					score += 1;
+				String questions  = JOptionPane.showInputDialog ("What is the name for the thing at the end of a shoelace?");
+				if (questions.equalsIgnoreCase("aglet")) {
+				score += 1;
 					}
-				String questi = JOptionPane.showInputDialog ("Whats the capital of North Macedonia?");
-				if (question.equalsIgnoreCase("Skopje")) {
-					score += 1;
+				String questionss = JOptionPane.showInputDialog ("Whats the capital of North Macedonia?");
+				if (questionss.equalsIgnoreCase("Skopje")) {
+				score += 1;
 					}
 		// MAKE MORE QUESTIONS. Ask more questions by repeating the above 
 				// Option: Subtract a point from their score for a wrong answer
 		
 		
 		// After all the questions have been asked, tell the user their final score 
-		
+				JOptionPane.showMessageDialog(null, "Your score is " +score);
 	}
 }

@@ -27,8 +27,8 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 	
 	boolean started = false;
 	BufferedImage maze;
-	final int frameWidth = 500;
-	final int frameHeight = 500;
+	final int frameWidth = 600;
+	final int frameHeight = 600;
 
 	ScaryMaze() throws Exception {
 		
@@ -39,11 +39,11 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		
 		//2. Change the line of code below so that it uses YOUR maze's file name
-		maze = ImageIO.read(getClass().getResource("standardMaze.png"));
+		maze = ImageIO.read(getClass().getResource("smg.png"));
 		
 		
 		//3. Run the program. Do you see your maze? Don't continue until you do.
-		
+		 
 		
 		// Leave this code here! It will allow the program to know when the mouse moves. 
 		addMouseMotionListener(this);
@@ -57,11 +57,12 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		int mouseColor = maze.getRGB(mouseX, mouseY);	
 		
 		//4. Print the mouseColor variable (Hint: use syso)
-		
+		System.out.println(mouseColor);
 		//5.  Run your program and move your mouse over the START COLOR. A number will be printed to the console
 		
+	
 		
-		int startColor=0;
+		int startColor=16756225;
 		//6. Change the value of this startColor variable to the number printed in the previous step. 
 		
 		
@@ -73,7 +74,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		
 		//7. Make a new int variable for the background color of the maze
-
+		int backcolor = 16777216;
 		
 		//8. Run the program and move the mouse over the BACKGROUND COLOR. 
 		//   Use the number that is printed to the console to set the background color variable 

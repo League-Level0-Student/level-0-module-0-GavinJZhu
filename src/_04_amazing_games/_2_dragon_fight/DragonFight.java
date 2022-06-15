@@ -50,26 +50,31 @@ public class DragonFight {
 					  // -- Find a random number between 0 and 25 and store it in playerAttack.
 		
 				// 6. Subtract the player attack value from the dragon's health
-
+				dHealth -=strength;
 			// THE DRAGON RETALIATES
 
+				
 				// 7. Find a random number between 0 and 35 and store it in dragonAttack
-	
+				dStrength = ran.nextInt(36);
 				// 8. Subtract the dragon attack value from the player's health
-
+				health-=dStrength;
 			// ASSESS THE DAMAGE
-
+				
 				// 9. If the player's health is less than or equal to 0, the game is over,
 				//    call the playerLost() method
-	
+				if (health <= 0) {
+				playerLost();
+				}
 			
 				// 10. If the dragon's health is less than or equal to 0, the game is over,
 				//     call the dragonLost() method
-
+				if (dHealth <= 0) {
+				dragonLost();	
+				}
 			
 				// 11.  Pop up a message that tells us how much health the player and
 				// 		dragon have left.
-
+				JOptionPane.showMessageDialog(null,"You have " + health + " health left. The dragon has " + dHealth + " health left.");
 			
 			// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
@@ -81,14 +86,14 @@ public class DragonFight {
 
 	static void playerLost() {
 		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
+				JOptionPane.showMessageDialog(null, "You died, and you failed to get the desire of treasure. :("); 
 
 		System.exit(0);   //This code ends the program
 	}
 
 	static void dragonLost() {
 		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
-
+				JOptionPane.showMessageDialog(null, "You defeated the dragon and have won a ton of gold!");
 		System.exit(0);   //This code ends the program
 	}
 

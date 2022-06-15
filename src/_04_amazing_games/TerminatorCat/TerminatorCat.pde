@@ -16,15 +16,15 @@ void setup() {
   
 // 2. The code below loads your cat picture into the program. 
 //     Make sure the file name is correct for the cat image you saved earlier
-cat = loadImage("cat.jpg");
+cat = loadImage("cat.jpeg");
   
 // 3. Set the size of the sketch. Make it big enough to show the cat you chose.
-
+size(900,596);
 // 4. Resize the cat so it is the same size as the sketch
-
+cat.resize(900,596);
 // 5. DRAW CAT.    Use the background() command to make the cat the background of the sketch
 //    Run the program to see if the cat is drawn. Get this working before you go on.
- 
+ background(cat);
 
   }
 
@@ -40,18 +40,21 @@ void draw() {
 //    The x,y position of the eye will be printed at the bottom of your processing window. 
 //    Variables for x and y have been created at the top of your sketch, 
 //    now you can set them equal to the values you just found.
-
+  x=255;
+  y=185;
 // 8. DRAW CIRCLES.
 //     The circles will have black lines around them by default. Put noStroke(); here to remove them.
+noStroke();
+ellipse(255,185, 75,75);
 
 // 9.  COLOR.  Set the color of your ellipse to the laser color you would like
 //    Remember to use the   fill()  command to set colors.
-
+fill(242, 0, 0);
 
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, width, height);
+               ellipse(x, y, 75, 75);
 // Run the program to make sure it is in the right place and is the right size.
 }
 

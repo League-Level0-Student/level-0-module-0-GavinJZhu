@@ -23,27 +23,27 @@ public class StarShow {
 		// Remove the drawStar(150) from the program before you proceed.
 		
 		// Set the robot speed to 100
-
+		batman.setSpeed(100);
 		// Make a variable to hold the X position of the Robot and set it to 10
-
+		int x=10;
 		// Make a variable to hold the Y position of the Robot and set it to 600
-
+		int y=600;
 		// Make a variable to hold the star size and set it to 25
-	
+		int star=25;
 		// Make a variable to count how many stars have been drawn and set it to 0
-
+		int starcount=0;
 		// LOOP: Start a while loop to repeat the following code until 7 stars have been drawn
-
+		while (starcount<7) {
 			// Set the pen width to the number of stars drawn so far
-
+			batman.setPenWidth(starcount);
 			// Set the X position of the robot to your X variable
-
+			batman.setX(x);
 			// Set the Y position of the robot to your Y variable
-
+			batman.setY(y);
 			// Call the drawStar() method with your star size variable
-
+			drawStar(star);
 			// Increase the value of the X position variable by star size. See Figure 2
-
+			x=
 			// decrease the value of the Y position variable by star size. See Figure 3
 
 			// Increase the star size by 20
@@ -57,7 +57,7 @@ public class StarShow {
 		
 		
 		// End the while loop here
-
+		}
 		// Run the program. Check that your star looks like the picture in the recipe.
 	}
 

@@ -17,7 +17,7 @@ public class StarShow {
 		// This code will draw one star whose size is 150 pixels per side....
 		// but first you have to write some code. Find the drawStar() method and 
 		// write the code to draw a star.
-		drawStar(150);
+		//       drawStar(150);
 		
 		// Run the program. Check that your star is the same as the first picture in the recipe.
 		// Remove the drawStar(150) from the program before you proceed.
@@ -35,7 +35,7 @@ public class StarShow {
 		// LOOP: Start a while loop to repeat the following code until 7 stars have been drawn
 		while (starcount<7) {
 			// Set the pen width to the number of stars drawn so far
-			batman.setPenWidth(starcount);
+			batman.setPenWidth(star);
 			// Set the X position of the robot to your X variable
 			batman.setX(x);
 			// Set the Y position of the robot to your Y variable
@@ -43,18 +43,18 @@ public class StarShow {
 			// Call the drawStar() method with your star size variable
 			drawStar(star);
 			// Increase the value of the X position variable by star size. See Figure 2
-			x=
+			x=x+star;
 			// decrease the value of the Y position variable by star size. See Figure 3
-
+			y=y-star;
 			// Increase the star size by 20
-
+			star=star+20;
 			// Turn the robot 12 degrees
-
+			batman.turn(12);
 			// Change the pen color (random)
-
+			batman.setRandomPenColor();
 		
 			// Increase the number of stars that have been drawn by 1,
-		
+			starcount=starcount+1;
 		
 		// End the while loop here
 		}
@@ -63,21 +63,22 @@ public class StarShow {
 
 	private void drawStar(int starSize) {
 		// Put the robot's pen down
-
+		batman.penDown();
+		//     System.out.println("testing");
     	// COUNT. Create an int variable that will count how many lines of the star we have drawn.
     	//        The start value will be zero because no lines have yet been drawn. Use this code:
-		  /**     int lines = 0;    **/
+		int lines = 0;
 
 		// LOOP: Start a while loop to repeat the following code until 5 lines have been drawn
-
+		while(lines<5) {
 				// MOVE the robot the distance of the starSize variable
-
+				batman.move(starSize);
 				// TURN the robot 144 degrees
-
+				batman.turn(144);
 				// COUNT. Add one to the number of lines the robot has drawn      lines+=1;
-
+				lines=lines+1;
     	// End the while loop here
-
+		}
 }
 	
 	public static void main(String[] args) {

@@ -5,7 +5,7 @@
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
 	 * If you are not sure, ask your teacher 
 	 * *****************/
-boolean canPlaySounds = true;
+boolean canPlaySounds = false;
 
 import processing.sound.*;
 SoundFile meow;
@@ -43,7 +43,7 @@ void draw() {
 // 3. DRAW BACKGROUND    
 //    Use the background() command to draw where the race is taking place.
 //    You can use the image provided (space), or change it to something else.
-  
+   background(space); 
   
 // 4. DRAW the RACERS
 //    You can use the cat and dog images for the racers or change them to something else.
